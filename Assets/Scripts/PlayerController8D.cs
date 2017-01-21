@@ -11,7 +11,7 @@ public class PlayerController8D : MonoBehaviour {
 	private float inputX, inputY;
 	private Vector3 movement = new Vector3(0,0,0);
 
-	private Vector3 facingDirection = new Vector3(0, 1, 0);
+	private Vector3 facingDirection = new Vector3(1, 0, 0);
 
 	// Use this for initialization
 	void Start()
@@ -32,7 +32,7 @@ public class PlayerController8D : MonoBehaviour {
 		inputY = Input.GetAxisRaw ("Vertical");
 
 		if (inputX != 0 || inputY != 0) {
-			animator.SetBool ("Walking", true);
+			animator.SetBool ("Swimming", true);
 			if (inputX > 0) {
 				animator.SetFloat ("LastMoveX", 1f);
 			} else if (inputX < 0){
@@ -50,7 +50,7 @@ public class PlayerController8D : MonoBehaviour {
 			}
 			facingDirection = new Vector3(inputX, inputY, 0);
 		} else {
-			animator.SetBool ("Walking", false);
+			animator.SetBool ("Swimming", false);
 		}
 
 		animator.SetFloat ("SpeedX", inputX);
