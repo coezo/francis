@@ -66,7 +66,7 @@ public class PlayerController8D : MonoBehaviour {
 
 	private void Shoot(){
 		if (Input.GetButtonDown (controle.fire)) {
-			waveShooter.Shoot ();
+			waveShooter.Shoot (facingDirection);
 		} else if (Input.GetButtonDown (controle.boost)) {
 			// Implementar
 		}

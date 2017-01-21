@@ -13,8 +13,8 @@ public class Wave : MonoBehaviour {
 		light = GetComponent<Light> ();
 	}
 
-	public void Shoot () {
-		this.GetComponent<Rigidbody2D> ().AddForce ( transform.right * speed);
+	public void Shoot (Vector3 direction) {
+		this.GetComponent<Rigidbody2D> ().AddForce ( direction * speed);
 		InvokeRepeating ("Fade", 0, 0.1f * fadingTime);
 	}
 
