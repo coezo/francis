@@ -10,9 +10,5 @@ public class Wave : MonoBehaviour {
 	void Start () {
 		this.GetComponent<Rigidbody2D> ().AddRelativeForce ( Vector2.right * speed);
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
 }
