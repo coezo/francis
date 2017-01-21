@@ -10,12 +10,7 @@ public class WaveShooter : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		wave1 = Resources.Load ("Prefabs/Wave") as GameObject;
-		wave2 = Resources.Load ("Prefabs/Wave") as GameObject;
-		wave3 = Resources.Load ("Prefabs/Wave") as GameObject;
 
-		wave2.transform.Rotate (Vector3.forward * 45f);
-		wave3.transform.Rotate (Vector3.forward * -45f);
 	}
 	
 	// Update is called once per frame
@@ -26,8 +21,17 @@ public class WaveShooter : MonoBehaviour {
 	}
 
 	private void Shoot(){
-		Instantiate (wave1, transform.position, wave1.transform.rotation);
-		Instantiate (wave2, transform.position, wave2.transform.rotation);
-		Instantiate (wave3, transform.position, wave3.transform.rotation);
+		Vector3 depth = new Vector3 (transform.position.x, transform.position.y, -1);
+
+		wave1 = Instantiate (Resources.Load ("Prefabs/Wave"), depth, transform.rotation) as GameObject;
+		wave2 = Instantiate (Resources.Load ("Prefabs/Wave"), depth, transform.rotation) as GameObject;
+		wave3 = Instantiate (Resources.Load ("Prefabs/Wave"), depth, transform.rotation) as GameObject;
+
+		wave2.transform.Rotate (Vector3.forward * 45);
+		wave3.transform.Rotate (Vector3.forward * -45);
+
+		wave1.GetComponent<Wave> ().Shoot ();
+		wave2.GetComponent<Wave> ().Shoot ();
+		wave3.GetComponent<Wave> ().Shoot ();
 	}
 }

@@ -234,7 +234,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdc667b9c447c6b41a4bf776669c0e14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wave: {fileID: 1320819658680318, guid: 5ee5435e737f54b45a0b94c2fc1bd287, type: 2}
 --- !u!1 &705403302
 GameObject:
   m_ObjectHideFlags: 0
@@ -332,7 +331,7 @@ GameObject:
   - component: {fileID: 771735017}
   - component: {fileID: 771735016}
   - component: {fileID: 771735015}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -411,7 +410,7 @@ GameObject:
   - component: {fileID: 1086868458}
   - component: {fileID: 1086868457}
   - component: {fileID: 1086868456}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wall (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

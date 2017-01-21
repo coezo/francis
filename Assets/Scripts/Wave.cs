@@ -6,9 +6,8 @@ public class Wave : MonoBehaviour {
 
 	public float speed;
 
-	// Use this for initialization
-	void Start () {
-		this.GetComponent<Rigidbody2D> ().AddRelativeForce ( Vector2.right * speed);
+	public void Shoot () {
+		this.GetComponent<Rigidbody2D> ().AddForce ( transform.right * speed);
 	}
 
 }
