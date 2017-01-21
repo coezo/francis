@@ -4,23 +4,9 @@ using UnityEngine;
 
 public class WaveShooter : MonoBehaviour {
 
-	//public GameObject wave;
-
 	private GameObject wave1, wave2, wave3;
 
-	// Use this for initialization
-	void Start () {
-
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		if (Input.GetKeyDown (KeyCode.Space)) {
-			Shoot ();
-		}
-	}
-
-	private void Shoot(){
+	public void Shoot(){
 		Vector3 depth = new Vector3 (transform.position.x, transform.position.y, -1);
 
 		wave1 = Instantiate (Resources.Load ("Prefabs/Wave"), depth, transform.rotation) as GameObject;

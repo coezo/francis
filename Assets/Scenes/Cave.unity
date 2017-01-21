@@ -124,6 +124,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  controle:
+    horizontalAxis: HorizontalP1
+    verticalAxis: VerticalP1
+    fire: FireP1
+    boost: BoostP1
 --- !u!212 &3768498
 SpriteRenderer:
   m_ObjectHideFlags: 0

@@ -6,21 +6,25 @@ public class PlayerController8D : MonoBehaviour {
 
 	public float speed;             //Floating point variable to store the player's movement speed.
 
+	public Controle controle;
+
 	private Animator animator;
+	private WaveShooter waveShooter;
 
 	private float inputX, inputY;
 	private Vector3 movement = new Vector3(0,0,0);
 
 	private Vector3 facingDirection = new Vector3(1, 0, 0);
 
-	// Use this for initialization
-	void Start()
+	void Awake()
 	{
-		animator = GetComponentInChildren<Animator> ();
+		animator = GetComponent<Animator> ();
+		waveShooter = GetComponent<WaveShooter> ();
 	}
 
 	void Update(){
 		Move ();
+		Shoot ();
 	}
 
 	void FixedUpdate(){
@@ -28,8 +32,8 @@ public class PlayerController8D : MonoBehaviour {
 	}
 
 	private void Move(){
-		inputX = Input.GetAxisRaw ("Horizontal");
-		inputY = Input.GetAxisRaw ("Vertical");
+		inputX = Input.GetAxisRaw (controle.horizontalAxis);
+		inputY = Input.GetAxisRaw (controle.verticalAxis);
 
 		if (inputX != 0 || inputY != 0) {
 			animator.SetBool ("Swimming", true);
@@ -58,6 +62,14 @@ public class PlayerController8D : MonoBehaviour {
 
 		movement = new Vector3(inputX, inputY, 0);
 		//transform.Translate(movement * speed * Time.deltaTime);
+	}
+
+	private void Shoot(){
+		if (Input.GetButtonDown (controle.fire)) {
+			waveShooter.Shoot ();
+		} else if (Input.GetButtonDown (controle.boost)) {
+			// Implementar
+		}
 	}
 
 }
