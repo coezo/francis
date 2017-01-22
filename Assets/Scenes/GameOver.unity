@@ -1463,7 +1463,7 @@ MonoBehaviour:
   jesseStar: {fileID: 1350909436}
   alexStar: {fileID: 1776630992}
   sashaStar: {fileID: 241144400}
-  menuController: {fileID: 0}
+  menuController: {fileID: 1141439324}
 --- !u!4 &1820001641
 Transform:
   m_ObjectHideFlags: 0
