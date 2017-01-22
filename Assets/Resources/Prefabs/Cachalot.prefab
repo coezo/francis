@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 50314714243943944}
   - component: {fileID: 114760690251500270}
   - component: {fileID: 60757950657244728}
+  - component: {fileID: 114662021207899224}
   m_Layer: 0
   m_Name: Cachalot
   m_TagString: Player
@@ -154,6 +155,69 @@ MonoBehaviour:
     verticalAxis: VerticalP1
     fire: FireP1
     boost: BoostP1
+--- !u!114 &114662021207899224
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1131309240629746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 248f4633dfee54679b2bf16340f3998f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackDirection: {x: 0, y: 0, z: 0}
+  canInput: 1
+  currentInput: 2
+  StartButtonPressed:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: StartEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  AButtonPressed:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114527245842603522}
+        m_MethodName: Shoot
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  BButtonPressed:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114527245842603522}
+        m_MethodName: Boost
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  CButtonPressed:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  StartButtonHeld: 0
+  AButtonHeld: 0
+  BButtonHeld: 0
+  CButtonHeld: 0
+  h: 0
+  v: 0
+  hAttack: 0
+  vAttack: 0
 --- !u!114 &114760690251500270
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -197,6 +261,6 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: ee9610cb0951943e18969437daff16e6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0.7103448, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
