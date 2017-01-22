@@ -33,7 +33,7 @@ public class GameManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		totalEstrelas = estrelas.Length;
+		ResetScore ();
 	}
 	
 	public void CountScore(PlayerController8D.Character character){
@@ -56,13 +56,16 @@ public class GameManager : MonoBehaviour {
 			break;
 		}
 		totalEstrelas--;
-		UpdateUI ();
 		if(totalEstrelas == 0){
 			SceneManager.LoadScene ("GameOver");
 		}
 	}
 
-	private void UpdateUI(){
-		
+	private void ResetScore(){
+		totalEstrelas = estrelas.Length;
+		scoreFrancis = 0;
+		scoreJesse = 0;
+		scoreAlex = 0;
+		scoreSasha = 0;
 	}
 }
