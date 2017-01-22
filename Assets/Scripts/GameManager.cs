@@ -61,11 +61,27 @@ public class GameManager : MonoBehaviour {
 		}
 	}
 
-	private void ResetScore(){
+	public void ResetScore(){
 		totalEstrelas = estrelas.Length;
 		scoreFrancis = 0;
 		scoreJesse = 0;
 		scoreAlex = 0;
 		scoreSasha = 0;
+	}
+
+	public PlayerController8D.Character GetChampion(){
+		int[] scores = { scoreFrancis, scoreJesse, scoreAlex, scoreSasha };
+		int highest = Mathf.Max (scores);
+
+		if (highest == scoreFrancis) {
+			return PlayerController8D.Character.Francis;
+		} else if (highest == scoreJesse) {
+			return PlayerController8D.Character.Jesse;
+		}else if (highest == scoreAlex){
+				return PlayerController8D.Character.Alex;
+		}else{
+				return PlayerController8D.Character.Sasha;
+		}
+
 	}
 }
