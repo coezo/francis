@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
 
@@ -14,6 +16,11 @@ public class GameManager : MonoBehaviour {
 	public int scoreJesse;
 	public int scoreAlex;
 	public int scoreSasha;
+
+	public Text scoreFrancisText;
+	public Text scoreJesseText;
+	public Text scoreAlexText;
+	public Text scoreSashaText;
 
 	void Awake(){
 		if (Instance == null) {
@@ -33,19 +40,26 @@ public class GameManager : MonoBehaviour {
 		switch (character) {
 		case PlayerController8D.Character.Francis:
 			scoreFrancis++;
+			scoreFrancisText.text = scoreFrancis.ToString();
 			break;
 		case PlayerController8D.Character.Jesse:
 			scoreJesse++;
+			scoreJesseText.text = scoreJesse.ToString();
 			break;
 		case PlayerController8D.Character.Alex:
 			scoreAlex++;
+			scoreAlexText.text = scoreAlex.ToString();
 			break;
 		case PlayerController8D.Character.Sasha:
 			scoreSasha++;
+			scoreSashaText.text = scoreSasha.ToString();
 			break;
 		}
 		totalEstrelas--;
 		UpdateUI ();
+		if(totalEstrelas == 0){
+			SceneManager.LoadScene ("GameOver");
+		}
 	}
 
 	private void UpdateUI(){
