@@ -1,13 +1,14 @@
 fileFormatVersion: 2
-guid: b6d2931a40fd943c98f786f703ea3dc0
-timeCreated: 1485104524
+guid: e151dff0bc2864a4ca30db0e914b7dc5
+timeCreated: 1485104361
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: alga02_0
-    21300002: alga02_1
-    21300004: alga02_2
-    21300006: alga02_3
+    21300000: mine_explosion_0
+    21300002: mine_explosion_1
+    21300004: mine_explosion_2
+    21300006: mine_explosion_3
+    21300008: mine_explosion_4
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -98,52 +99,65 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: alga02_0
-      rect:
-        serializedVersion: 2
-        x: 3
-        y: 172
-        width: 12
-        height: 44
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: alga02_1
+      name: mine_explosion_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 115
-        width: 13
-        height: 43
+        y: 0
+        width: 188
+        height: 168
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: alga02_2
+      name: mine_explosion_1
       rect:
         serializedVersion: 2
-        x: 0
-        y: 60
-        width: 12
-        height: 41
+        x: 188
+        y: 0
+        width: 188
+        height: 168
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: alga02_3
+      name: mine_explosion_2
       rect:
         serializedVersion: 2
-        x: 4
-        y: 6
-        width: 8
-        height: 39
+        x: 376
+        y: 0
+        width: 188
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mine_explosion_3
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 0
+        width: 188
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mine_explosion_4
+      rect:
+        serializedVersion: 2
+        x: 752
+        y: 0
+        width: 188
+        height: 168
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

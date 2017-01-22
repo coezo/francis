@@ -14,6 +14,7 @@ public class PlayerController8D : MonoBehaviour {
 
 	private SpriteRenderer spriteRenderer;
 	private Animator animator;
+	private Rigidbody2D rigidbody2d;
 	private WaveShooter waveShooter;
 	private PlayerInput playerInput;
 
@@ -29,6 +30,7 @@ public class PlayerController8D : MonoBehaviour {
 	{
 		spriteRenderer = GetComponent<SpriteRenderer> ();
 		animator = GetComponent<Animator> ();
+		rigidbody2d = GetComponent<Rigidbody2D> ();
 		waveShooter = GetComponent<WaveShooter> ();
 		playerInput = GetComponent<PlayerInput> ();
 	}
@@ -38,7 +40,9 @@ public class PlayerController8D : MonoBehaviour {
 	}
 
 	void FixedUpdate(){
-		GetComponent<Rigidbody2D>().velocity = movement * speed;
+		if (!isStunned) {
+			rigidbody2d.velocity = movement * speed;
+		}
 	}
 
 	private void Move(){
@@ -91,6 +95,7 @@ public class PlayerController8D : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other){
 		if (other.CompareTag ("Mine")) {
 			isStunned = true;
+			rigidbody2d.velocity = Vector3.zero;
 			StartCoroutine ("FlashSprite");
 			Invoke ("StopStun", stunDuration);
 		} else if (other.CompareTag ("Star")) {
@@ -101,6 +106,7 @@ public class PlayerController8D : MonoBehaviour {
 
 	private void StopStun(){
 		StopCoroutine ("FlashSprite");
+		spriteRenderer.enabled = true;
 		isStunned = false;
 	}
 

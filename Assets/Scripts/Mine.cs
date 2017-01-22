@@ -14,24 +14,18 @@ public class Mine : MonoBehaviour {
 	void Awake () {
 		animator = GetComponent<Animator> ();
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 
 	void OnCollisionEnter2D(Collision2D other){
 		if (other.gameObject.CompareTag ("Player") && !isExploding) {
 			isExploding = true;
-			Invoke ("Explode", 1.0f);
+			Explode ();
 		}
 	}
 
 	private void Explode(){
 		mineCollider.enabled = false;
-		//animator.SetTrigger ("explode");
+		animator.SetTrigger ("explode");
 		explosionTrigger.enabled = true;
-		Invoke("DestroyMine", 0.3f); //Transferir para o fim da animacao quando estiver pronta
 	}
 
 	public void DestroyMine(){
