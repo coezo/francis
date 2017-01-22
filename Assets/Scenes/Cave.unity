@@ -407,6 +407,11 @@ Prefab:
       propertyPath: currentInput
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 114527245842603522, guid: 0e8a17aeefb9a40c08df6e35100e0385,
+        type: 2}
+      propertyPath: personagem
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0e8a17aeefb9a40c08df6e35100e0385, type: 2}
   m_IsPrefabParent: 0
@@ -492,6 +497,11 @@ Prefab:
         type: 2}
       propertyPath: currentInput
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114527245842603522, guid: 0e8a17aeefb9a40c08df6e35100e0385,
+        type: 2}
+      propertyPath: personagem
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0e8a17aeefb9a40c08df6e35100e0385, type: 2}
@@ -624,6 +634,11 @@ Prefab:
         type: 2}
       propertyPath: currentInput
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114527245842603522, guid: 0e8a17aeefb9a40c08df6e35100e0385,
+        type: 2}
+      propertyPath: personagem
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0e8a17aeefb9a40c08df6e35100e0385, type: 2}

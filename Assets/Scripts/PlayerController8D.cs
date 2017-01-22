@@ -4,6 +4,10 @@ using System.Collections;
 
 public class PlayerController8D : MonoBehaviour {
 
+	public enum Character {Francis, Jesse, Alex, Sasha};
+
+	public Character personagem;
+
 	public float speed;             //Floating point variable to store the player's movement speed.
 
 	public Controle controle;
