@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: TilemapGround
-  m_Shader: {fileID: 4800000, guid: a27eb994ddf5ad04d97a5b481b4c3e6c, type: 3}
+  m_Shader: {fileID: 4800000, guid: 766dc1c42357441429d869f67de2c722, type: 3}
   m_ShaderKeywords: PIXELSNAP_ON
   m_LightmapFlags: 5
   m_CustomRenderQueue: -1

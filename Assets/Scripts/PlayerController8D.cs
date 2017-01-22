@@ -89,11 +89,13 @@ public class PlayerController8D : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D other){
-		if(other.CompareTag("Mine")){
-			Debug.Log ("Tomou dano");
+		if (other.CompareTag ("Mine")) {
 			isStunned = true;
 			StartCoroutine ("FlashSprite");
 			Invoke ("StopStun", stunDuration);
+		} else if (other.CompareTag ("Star")) {
+			GameManager.Instance.CountScore (personagem);
+			Destroy (other.gameObject);
 		}
 	}
 
