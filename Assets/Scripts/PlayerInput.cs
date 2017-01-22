@@ -112,8 +112,8 @@ public class PlayerInput : MonoBehaviour {
 						hFireAxis="HorizontalArrowGP1Mac";
 						vFireAxis="VerticalArrowGP1Mac";
 						StartButton=KeyCode.Joystick1Button9;
-						AButton=KeyCode.Joystick1Button16;
-						BButton=KeyCode.Joystick1Button17;
+						AButton=KeyCode.Joystick1Button3;
+						BButton=KeyCode.Joystick1Button1;
 						CButton=KeyCode.Joystick1Button18;
 					} else {
 						hFireAxis="HorizontalArrowGP1";
@@ -131,8 +131,8 @@ public class PlayerInput : MonoBehaviour {
 						hFireAxis="HorizontalArrowGP2Mac";
 						vFireAxis="VerticalArrowGP2Mac";
 						StartButton=KeyCode.Joystick2Button9;
-						AButton=KeyCode.Joystick2Button16;
-						BButton=KeyCode.Joystick2Button17;
+						AButton=KeyCode.Joystick2Button3;
+						BButton=KeyCode.Joystick2Button1;
 						CButton=KeyCode.Joystick2Button18;
 					} else {
 						hFireAxis="HorizontalArrowGP2";
