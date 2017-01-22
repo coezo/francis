@@ -72,4 +72,10 @@ public class PlayerController8D : MonoBehaviour {
 		}
 	}
 
+	void OnTriggerEnter2D(Collider2D other){
+		if(other.CompareTag("Mine")){
+			Debug.Log ("Tomou dano");
+		}
+	}
+
 }
