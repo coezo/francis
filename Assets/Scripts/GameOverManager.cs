@@ -33,6 +33,11 @@ public class GameOverManager : MonoBehaviour {
 			sashaStar.SetActive (true);
 			break;
 		}
+
+		francisScore.text = GameManager.Instance.scoreFrancis.ToString();
+		jesseScore.text = GameManager.Instance.scoreJesse.ToString();
+		alexScore.text = GameManager.Instance.scoreAlex.ToString();
+		sashaScore.text = GameManager.Instance.scoreSasha.ToString();
 	}
 	
 	public void PlayAgain(){
