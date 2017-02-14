@@ -47,8 +47,8 @@ public class PlayerController8D : MonoBehaviour {
 
 	private void Move(){
 		if(!isStunned){
-			inputX = playerInput.h;//Input.GetAxisRaw (controle.horizontalAxis);
-			inputY = playerInput.v;//Input.GetAxisRaw (controle.verticalAxis);
+//			inputX = playerInput.h;//Input.GetAxisRaw (controle.horizontalAxis);
+//			inputY = playerInput.v;//Input.GetAxisRaw (controle.verticalAxis);
 
 			if (inputX != 0 || inputY != 0) {
 				animator.SetBool ("Swimming", true);
@@ -78,6 +78,11 @@ public class PlayerController8D : MonoBehaviour {
 			movement = new Vector3(inputX, inputY, 0);
 			//transform.Translate(movement * speed * Time.deltaTime);
 		}
+	}
+
+	public void SetInputs(float x, float y){
+		inputX = x;
+		inputY = -y;
 	}
 
 	public void Shoot(){
